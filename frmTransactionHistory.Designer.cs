@@ -28,265 +28,277 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpFromDate = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpToDate = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboTransactionType = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboStatus = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSearchCode = new System.Windows.Forms.TextBox();
-            this.dgvTransactions = new System.Windows.Forms.DataGridView();
-            this.MaPhieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
-            this.SuspendLayout();
+            label5 = new Label();
+            groupBox1 = new GroupBox();
+            txtSearchCode = new TextBox();
+            label6 = new Label();
+            cboStatus = new ComboBox();
+            label4 = new Label();
+            cboTransactionType = new ComboBox();
+            label3 = new Label();
+            dtpToDate = new DateTimePicker();
+            label2 = new Label();
+            dtpFromDate = new DateTimePicker();
+            label1 = new Label();
+            dgvTransactions = new DataGridView();
+            MaPhieu = new DataGridViewTextBoxColumn();
+            Loai = new DataGridViewTextBoxColumn();
+            Ngay = new DataGridViewTextBoxColumn();
+            NCC = new DataGridViewTextBoxColumn();
+            Nhanvien = new DataGridViewTextBoxColumn();
+            Tongtien = new DataGridViewTextBoxColumn();
+            Trangthai = new DataGridViewTextBoxColumn();
+            btnPrint = new Button();
+            btnRefresh = new Button();
+            btnView = new Button();
+            btnExport = new Button();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
+            SuspendLayout();
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(306, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 33);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Lịch sử Giao dịch Kho";
+            label5.AutoSize = true;
+            label5.Font = new Font("Tahoma", 20.25F, FontStyle.Bold);
+            label5.Location = new Point(357, 10);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(304, 33);
+            label5.TabIndex = 12;
+            label5.Text = "Lịch sử Giao dịch Kho";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtSearchCode);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.cboStatus);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.cboTransactionType);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dtpToDate);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dtpFromDate);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(931, 180);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Bộ lọc tìm kiếm";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label1.Location = new System.Drawing.Point(63, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Từ ngày:";
-            // 
-            // dtpFromDate
-            // 
-            this.dtpFromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.dtpFromDate.Location = new System.Drawing.Point(119, 28);
-            this.dtpFromDate.Name = "dtpFromDate";
-            this.dtpFromDate.Size = new System.Drawing.Size(200, 22);
-            this.dtpFromDate.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(461, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Đến ngày:";
-            // 
-            // dtpToDate
-            // 
-            this.dtpToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.dtpToDate.Location = new System.Drawing.Point(534, 28);
-            this.dtpToDate.Name = "dtpToDate";
-            this.dtpToDate.Size = new System.Drawing.Size(200, 22);
-            this.dtpToDate.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label3.Location = new System.Drawing.Point(76, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Loại GD:";
-            // 
-            // cboTransactionType
-            // 
-            this.cboTransactionType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cboTransactionType.FormattingEnabled = true;
-            this.cboTransactionType.Location = new System.Drawing.Point(141, 82);
-            this.cboTransactionType.Name = "cboTransactionType";
-            this.cboTransactionType.Size = new System.Drawing.Size(121, 24);
-            this.cboTransactionType.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label4.Location = new System.Drawing.Point(455, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Trạng thái:";
-            // 
-            // cboStatus
-            // 
-            this.cboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(531, 82);
-            this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(121, 24);
-            this.cboStatus.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label6.Location = new System.Drawing.Point(342, 143);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Tìm kiếm:";
+            groupBox1.Controls.Add(txtSearchCode);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(cboStatus);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(cboTransactionType);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(dtpToDate);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(dtpFromDate);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(0, 52);
+            groupBox1.Margin = new Padding(4, 3, 4, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 3, 4, 3);
+            groupBox1.Size = new Size(1086, 208);
+            groupBox1.TabIndex = 13;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Bộ lọc tìm kiếm";
             // 
             // txtSearchCode
             // 
-            this.txtSearchCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtSearchCode.Location = new System.Drawing.Point(413, 140);
-            this.txtSearchCode.Name = "txtSearchCode";
-            this.txtSearchCode.Size = new System.Drawing.Size(209, 22);
-            this.txtSearchCode.TabIndex = 9;
+            txtSearchCode.Font = new Font("Microsoft Sans Serif", 9.75F);
+            txtSearchCode.Location = new Point(482, 162);
+            txtSearchCode.Margin = new Padding(4, 3, 4, 3);
+            txtSearchCode.Name = "txtSearchCode";
+            txtSearchCode.Size = new Size(243, 22);
+            txtSearchCode.TabIndex = 9;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 9.75F);
+            label6.Location = new Point(399, 165);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(65, 16);
+            label6.TabIndex = 8;
+            label6.Text = "Tìm kiếm:";
+            // 
+            // cboStatus
+            // 
+            cboStatus.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cboStatus.FormattingEnabled = true;
+            cboStatus.Location = new Point(620, 95);
+            cboStatus.Margin = new Padding(4, 3, 4, 3);
+            cboStatus.Name = "cboStatus";
+            cboStatus.Size = new Size(140, 24);
+            cboStatus.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 9.75F);
+            label4.Location = new Point(531, 98);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(70, 16);
+            label4.TabIndex = 6;
+            label4.Text = "Trạng thái:";
+            // 
+            // cboTransactionType
+            // 
+            cboTransactionType.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cboTransactionType.FormattingEnabled = true;
+            cboTransactionType.Location = new Point(164, 95);
+            cboTransactionType.Margin = new Padding(4, 3, 4, 3);
+            cboTransactionType.Name = "cboTransactionType";
+            cboTransactionType.Size = new Size(140, 24);
+            cboTransactionType.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 9.75F);
+            label3.Location = new Point(89, 99);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 16);
+            label3.TabIndex = 4;
+            label3.Text = "Loại GD:";
+            // 
+            // dtpToDate
+            // 
+            dtpToDate.Font = new Font("Microsoft Sans Serif", 9.75F);
+            dtpToDate.Location = new Point(623, 32);
+            dtpToDate.Margin = new Padding(4, 3, 4, 3);
+            dtpToDate.Name = "dtpToDate";
+            dtpToDate.Size = new Size(233, 22);
+            dtpToDate.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 9.75F);
+            label2.Location = new Point(538, 38);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 16);
+            label2.TabIndex = 2;
+            label2.Text = "Đến ngày:";
+            // 
+            // dtpFromDate
+            // 
+            dtpFromDate.Font = new Font("Microsoft Sans Serif", 9.75F);
+            dtpFromDate.Location = new Point(139, 32);
+            dtpFromDate.Margin = new Padding(4, 3, 4, 3);
+            dtpFromDate.Name = "dtpFromDate";
+            dtpFromDate.Size = new Size(233, 22);
+            dtpFromDate.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F);
+            label1.Location = new Point(74, 37);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 16);
+            label1.TabIndex = 0;
+            label1.Text = "Từ ngày:";
             // 
             // dgvTransactions
             // 
-            this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaPhieu,
-            this.Loai,
-            this.Ngay,
-            this.NCC,
-            this.Nhanvien,
-            this.Tongtien,
-            this.Trangthai});
-            this.dgvTransactions.Location = new System.Drawing.Point(15, 248);
-            this.dgvTransactions.Name = "dgvTransactions";
-            this.dgvTransactions.Size = new System.Drawing.Size(916, 199);
-            this.dgvTransactions.TabIndex = 14;
+            dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTransactions.Columns.AddRange(new DataGridViewColumn[] { MaPhieu, Loai, Ngay, NCC, Nhanvien, Tongtien, Trangthai });
+            dgvTransactions.Location = new Point(18, 286);
+            dgvTransactions.Margin = new Padding(4, 3, 4, 3);
+            dgvTransactions.Name = "dgvTransactions";
+            dgvTransactions.Size = new Size(1069, 230);
+            dgvTransactions.TabIndex = 14;
             // 
             // MaPhieu
             // 
-            this.MaPhieu.HeaderText = "Mã phiếu";
-            this.MaPhieu.Name = "MaPhieu";
+            MaPhieu.HeaderText = "Mã phiếu";
+            MaPhieu.Name = "MaPhieu";
             // 
             // Loai
             // 
-            this.Loai.HeaderText = "Loại";
-            this.Loai.Name = "Loai";
+            Loai.HeaderText = "Loại";
+            Loai.Name = "Loai";
             // 
             // Ngay
             // 
-            this.Ngay.HeaderText = "Ngày";
-            this.Ngay.Name = "Ngay";
+            Ngay.HeaderText = "Ngày";
+            Ngay.Name = "Ngay";
             // 
             // NCC
             // 
-            this.NCC.HeaderText = "Nhà cung cấp";
-            this.NCC.Name = "NCC";
+            NCC.HeaderText = "Nhà cung cấp";
+            NCC.Name = "NCC";
             // 
             // Nhanvien
             // 
-            this.Nhanvien.HeaderText = "Nhân viên";
-            this.Nhanvien.Name = "Nhanvien";
+            Nhanvien.HeaderText = "Nhân viên";
+            Nhanvien.Name = "Nhanvien";
             // 
             // Tongtien
             // 
-            this.Tongtien.HeaderText = "Tổng tiền";
-            this.Tongtien.Name = "Tongtien";
+            Tongtien.HeaderText = "Tổng tiền";
+            Tongtien.Name = "Tongtien";
             // 
             // Trangthai
             // 
-            this.Trangthai.HeaderText = "Trạng thái";
-            this.Trangthai.Name = "Trangthai";
+            Trangthai.HeaderText = "Trạng thái";
+            Trangthai.Name = "Trangthai";
             // 
             // btnPrint
             // 
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(323, 513);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(97, 38);
-            this.btnPrint.TabIndex = 36;
-            this.btnPrint.Text = "In phiếu";
-            this.btnPrint.UseVisualStyleBackColor = true;
+            btnPrint.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPrint.Location = new Point(369, 540);
+            btnPrint.Margin = new Padding(4, 3, 4, 3);
+            btnPrint.Name = "btnPrint";
+            btnPrint.Size = new Size(113, 44);
+            btnPrint.TabIndex = 36;
+            btnPrint.Text = "In phiếu";
+            btnPrint.UseVisualStyleBackColor = true;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(578, 513);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(97, 38);
-            this.btnRefresh.TabIndex = 34;
-            this.btnRefresh.Text = "Làm lại";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.Location = new Point(666, 540);
+            btnRefresh.Margin = new Padding(4, 3, 4, 3);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(113, 44);
+            btnRefresh.TabIndex = 34;
+            btnRefresh.Text = "Làm lại";
+            btnRefresh.UseVisualStyleBackColor = true;
             // 
             // btnView
             // 
-            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.Location = new System.Drawing.Point(208, 513);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(97, 38);
-            this.btnView.TabIndex = 33;
-            this.btnView.Text = "Xem chi tiết";
-            this.btnView.UseVisualStyleBackColor = true;
+            btnView.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnView.Location = new Point(235, 540);
+            btnView.Margin = new Padding(4, 3, 4, 3);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(113, 44);
+            btnView.TabIndex = 33;
+            btnView.Text = "Xem chi tiết";
+            btnView.UseVisualStyleBackColor = true;
             // 
             // btnExport
             // 
-            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(458, 513);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(97, 38);
-            this.btnExport.TabIndex = 35;
-            this.btnExport.Text = "Xuất Excel";
-            this.btnExport.UseVisualStyleBackColor = true;
+            btnExport.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExport.Location = new Point(526, 540);
+            btnExport.Margin = new Padding(4, 3, 4, 3);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(113, 44);
+            btnExport.TabIndex = 35;
+            btnExport.Text = "Xuất Excel";
+            btnExport.UseVisualStyleBackColor = true;
             // 
             // frmTransactionHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 588);
-            this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnView);
-            this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.dgvTransactions);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label5);
-            this.Name = "frmTransactionHistory";
-            this.Text = "frmTransactionHistory";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1100, 616);
+            Controls.Add(btnPrint);
+            Controls.Add(btnRefresh);
+            Controls.Add(btnView);
+            Controls.Add(btnExport);
+            Controls.Add(dgvTransactions);
+            Controls.Add(groupBox1);
+            Controls.Add(label5);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "frmTransactionHistory";
+            Text = "frmTransactionHistory";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

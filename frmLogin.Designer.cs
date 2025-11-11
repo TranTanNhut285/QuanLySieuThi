@@ -28,99 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            contextMenuStrip1 = new ContextMenuStrip(components);
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            btnLogin = new Button();
+            btnCancel = new Button();
+            chkShowPassword = new CheckBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(495, 37);
+            label1.Font = new Font("Microsoft Sans Serif", 10.125F);
+            label1.Location = new Point(243, 53);
             label1.Name = "label1";
-            label1.Size = new Size(204, 45);
+            label1.Size = new Size(168, 17);
             label1.TabIndex = 0;
-            label1.Text = "ĐĂNG NHẬP";
+            label1.Text = "ĐĂNG NHẬP HỆ THỐNG";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(257, 170);
+            label2.Font = new Font("Microsoft Sans Serif", 10.125F);
+            label2.Location = new Point(160, 123);
             label2.Name = "label2";
-            label2.Size = new Size(179, 32);
+            label2.Size = new Size(73, 17);
             label2.TabIndex = 1;
-            label2.Text = "Tên đăng nhập:";
+            label2.Text = "Tài Khoản";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(257, 299);
+            label3.Font = new Font("Microsoft Sans Serif", 10.125F);
+            label3.Location = new Point(160, 160);
             label3.Name = "label3";
-            label3.Size = new Size(120, 32);
+            label3.Size = new Size(66, 17);
             label3.TabIndex = 2;
-            label3.Text = "Mật khẩu:";
+            label3.Text = "Mật khẩu";
             // 
-            // contextMenuStrip1
+            // txtUsername
             // 
-            contextMenuStrip1.ImageScalingSize = new Size(32, 32);
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
+            txtUsername.Font = new Font("Microsoft Sans Serif", 10.125F);
+            txtUsername.Location = new Point(232, 117);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(218, 23);
+            txtUsername.TabIndex = 3;
             // 
-            // textBox1
+            // txtPassword
             // 
-            textBox1.Location = new Point(495, 153);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(371, 58);
-            textBox1.TabIndex = 4;
+            txtPassword.Font = new Font("Microsoft Sans Serif", 10.125F);
+            txtPassword.Location = new Point(232, 157);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(218, 23);
+            txtPassword.TabIndex = 4;
+            txtPassword.UseSystemPasswordChar = true;
             // 
-            // textBox2
+            // btnLogin
             // 
-            textBox2.Location = new Point(495, 287);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(371, 58);
-            textBox2.TabIndex = 5;
+            btnLogin.Font = new Font("Microsoft Sans Serif", 10.125F);
+            btnLogin.Location = new Point(122, 226);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(104, 39);
+            btnLogin.TabIndex = 5;
+            btnLogin.Text = "Đăng nhập";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
-            // button1
+            // btnCancel
             // 
-            button1.Location = new Point(360, 464);
-            button1.Name = "button1";
-            button1.Size = new Size(199, 74);
-            button1.TabIndex = 6;
-            button1.Text = "Đăng nhập";
-            button1.UseVisualStyleBackColor = true;
+            btnCancel.Font = new Font("Microsoft Sans Serif", 10.125F);
+            btnCancel.Location = new Point(410, 226);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(109, 39);
+            btnCancel.TabIndex = 6;
+            btnCancel.Text = "Thoát";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
-            // button2
+            // chkShowPassword
             // 
-            button2.Location = new Point(726, 464);
-            button2.Name = "button2";
-            button2.Size = new Size(185, 74);
-            button2.TabIndex = 7;
-            button2.Text = "Thoát";
-            button2.UseVisualStyleBackColor = true;
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(456, 161);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(121, 19);
+            chkShowPassword.TabIndex = 7;
+            chkShowPassword.Text = "Hiện thị mật khẩu";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1212, 652);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(651, 341);
+            Controls.Add(chkShowPassword);
+            Controls.Add(btnCancel);
+            Controls.Add(btnLogin);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "frmLogin";
             Text = "frmLogin";
+            Load += frmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,10 +143,10 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private ContextMenuStrip contextMenuStrip1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private Button button2;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
+        private Button btnLogin;
+        private Button btnCancel;
+        private CheckBox chkShowPassword;
     }
 }

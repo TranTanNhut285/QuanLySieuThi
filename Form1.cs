@@ -38,6 +38,7 @@ namespace Mini_Mart
             {
                 await ConnectCouchbase();
                 await LoadDashboardData();
+                lblTenTaiKhoan.Text = UserSession.CurrentUser?.FullName ?? "Chưa đăng nhập";
             }
             catch (Exception ex)
             {
