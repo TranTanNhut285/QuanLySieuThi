@@ -1,0 +1,32 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+/bin/
+/obj/
+
+## Rider
+.idea/
+
+## NuGet
+*.nupkg
+packages/
+
+## VS Code
+.vscode/
+
+## OS Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## Visual Studio Code workspace storage
+.history/
+
+## Others
+*.log
+*.vsix
