@@ -30,10 +30,11 @@
         {
             label5 = new Label();
             groupBox1 = new GroupBox();
+            panelPreview = new Panel();
+            btnUpload = new Button();
             label14 = new Label();
             txtDescription = new TextBox();
             nudMaxStock = new NumericUpDown();
-            checkBox1 = new CheckBox();
             nudMinStock = new NumericUpDown();
             nudCurrentStock = new NumericUpDown();
             label13 = new Label();
@@ -58,8 +59,6 @@
             label1 = new Label();
             groupBox2 = new GroupBox();
             btnExport = new Button();
-            btnRefresh = new Button();
-            btnCancel = new Button();
             btnSave = new Button();
             btnEdit = new Button();
             btnAdd = new Button();
@@ -92,10 +91,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(panelPreview);
+            groupBox1.Controls.Add(btnUpload);
             groupBox1.Controls.Add(label14);
             groupBox1.Controls.Add(txtDescription);
             groupBox1.Controls.Add(nudMaxStock);
-            groupBox1.Controls.Add(checkBox1);
             groupBox1.Controls.Add(nudMinStock);
             groupBox1.Controls.Add(nudCurrentStock);
             groupBox1.Controls.Add(label13);
@@ -127,51 +127,56 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin sản phẩm";
             // 
+            // panelPreview
+            // 
+            panelPreview.Location = new Point(444, 343);
+            panelPreview.Name = "panelPreview";
+            panelPreview.Size = new Size(162, 137);
+            panelPreview.TabIndex = 27;
+            // 
+            // btnUpload
+            // 
+            btnUpload.Location = new Point(228, 379);
+            btnUpload.Name = "btnUpload";
+            btnUpload.Size = new Size(195, 46);
+            btnUpload.TabIndex = 26;
+            btnUpload.Text = "Upload Here";
+            btnUpload.UseVisualStyleBackColor = true;
+            // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Microsoft Sans Serif", 9.75F);
-            label14.Location = new Point(659, 409);
+            label14.Location = new Point(13, 395);
             label14.Margin = new Padding(6, 0, 6, 0);
             label14.Name = "label14";
-            label14.Size = new Size(128, 30);
+            label14.Size = new Size(184, 30);
             label14.TabIndex = 25;
-            label14.Text = "Trạng thái";
+            label14.Text = "Ảnh sản phẩm:";
             // 
             // txtDescription
             // 
             txtDescription.Font = new Font("Microsoft Sans Serif", 9.75F);
-            txtDescription.Location = new Point(1421, 325);
+            txtDescription.Location = new Point(1421, 236);
             txtDescription.Margin = new Padding(6, 7, 6, 7);
+            txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(255, 37);
+            txtDescription.Size = new Size(365, 244);
             txtDescription.TabIndex = 24;
             // 
             // nudMaxStock
             // 
             nudMaxStock.Font = new Font("Microsoft Sans Serif", 9.75F);
-            nudMaxStock.Location = new Point(1421, 236);
+            nudMaxStock.Location = new Point(1421, 153);
             nudMaxStock.Margin = new Padding(6, 7, 6, 7);
             nudMaxStock.Name = "nudMaxStock";
             nudMaxStock.Size = new Size(260, 37);
             nudMaxStock.TabIndex = 23;
             // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Microsoft Sans Serif", 9.75F);
-            checkBox1.Location = new Point(817, 406);
-            checkBox1.Margin = new Padding(6, 7, 6, 7);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(237, 34);
-            checkBox1.TabIndex = 12;
-            checkBox1.Text = "Đang kinh doanh";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
             // nudMinStock
             // 
             nudMinStock.Font = new Font("Microsoft Sans Serif", 9.75F);
-            nudMinStock.Location = new Point(1421, 148);
+            nudMinStock.Location = new Point(1421, 57);
             nudMinStock.Margin = new Padding(6, 7, 6, 7);
             nudMinStock.Name = "nudMinStock";
             nudMinStock.Size = new Size(260, 37);
@@ -180,7 +185,7 @@
             // nudCurrentStock
             // 
             nudCurrentStock.Font = new Font("Microsoft Sans Serif", 9.75F);
-            nudCurrentStock.Location = new Point(1421, 39);
+            nudCurrentStock.Location = new Point(856, 140);
             nudCurrentStock.Margin = new Padding(6, 7, 6, 7);
             nudCurrentStock.Name = "nudCurrentStock";
             nudCurrentStock.Size = new Size(260, 37);
@@ -190,7 +195,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Microsoft Sans Serif", 9.75F);
-            label13.Location = new Point(1280, 332);
+            label13.Location = new Point(1280, 226);
             label13.Margin = new Padding(6, 0, 6, 0);
             label13.Name = "label13";
             label13.Size = new Size(84, 30);
@@ -210,7 +215,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Microsoft Sans Serif", 9.75F);
-            label11.Location = new Point(1280, 145);
+            label11.Location = new Point(1280, 54);
             label11.Margin = new Padding(6, 0, 6, 0);
             label11.Name = "label11";
             label11.Size = new Size(62, 30);
@@ -221,7 +226,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Microsoft Sans Serif", 9.75F);
-            label12.Location = new Point(1280, 241);
+            label12.Location = new Point(1280, 140);
             label12.Margin = new Padding(6, 0, 6, 0);
             label12.Name = "label12";
             label12.Size = new Size(68, 30);
@@ -241,10 +246,10 @@
             // 
             cboSupplier.Font = new Font("Microsoft Sans Serif", 9.75F);
             cboSupplier.FormattingEnabled = true;
-            cboSupplier.Location = new Point(856, 135);
+            cboSupplier.Location = new Point(856, 408);
             cboSupplier.Margin = new Padding(6, 7, 6, 7);
             cboSupplier.Name = "cboSupplier";
-            cboSupplier.Size = new Size(258, 38);
+            cboSupplier.Size = new Size(553, 38);
             cboSupplier.TabIndex = 18;
             // 
             // cboUnit
@@ -254,14 +259,14 @@
             cboUnit.Location = new Point(856, 34);
             cboUnit.Margin = new Padding(6, 7, 6, 7);
             cboUnit.Name = "cboUnit";
-            cboUnit.Size = new Size(258, 38);
+            cboUnit.Size = new Size(393, 38);
             cboUnit.TabIndex = 17;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Microsoft Sans Serif", 9.75F);
-            label10.Location = new Point(1280, 54);
+            label10.Location = new Point(624, 140);
             label10.Margin = new Padding(6, 0, 6, 0);
             label10.Name = "label10";
             label10.Size = new Size(112, 30);
@@ -286,7 +291,7 @@
             cboCategory.Location = new Point(228, 295);
             cboCategory.Margin = new Padding(6, 7, 6, 7);
             cboCategory.Name = "cboCategory";
-            cboCategory.Size = new Size(288, 38);
+            cboCategory.Size = new Size(348, 38);
             cboCategory.TabIndex = 16;
             // 
             // txtBarcode
@@ -295,14 +300,14 @@
             txtBarcode.Location = new Point(228, 219);
             txtBarcode.Margin = new Padding(6, 7, 6, 7);
             txtBarcode.Name = "txtBarcode";
-            txtBarcode.Size = new Size(288, 37);
+            txtBarcode.Size = new Size(348, 37);
             txtBarcode.TabIndex = 15;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft Sans Serif", 9.75F);
-            label7.Location = new Point(615, 143);
+            label7.Location = new Point(609, 408);
             label7.Margin = new Padding(6, 0, 6, 0);
             label7.Name = "label7";
             label7.Size = new Size(177, 30);
@@ -326,7 +331,7 @@
             txtName.Location = new Point(228, 140);
             txtName.Margin = new Padding(6, 7, 6, 7);
             txtName.Name = "txtName";
-            txtName.Size = new Size(288, 37);
+            txtName.Size = new Size(348, 37);
             txtName.TabIndex = 14;
             // 
             // txtCode
@@ -335,6 +340,7 @@
             txtCode.Location = new Point(228, 57);
             txtCode.Margin = new Padding(6, 7, 6, 7);
             txtCode.Name = "txtCode";
+            txtCode.ReadOnly = true;
             txtCode.Size = new Size(288, 37);
             txtCode.TabIndex = 13;
             // 
@@ -396,8 +402,6 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(btnExport);
-            groupBox2.Controls.Add(btnRefresh);
-            groupBox2.Controls.Add(btnCancel);
             groupBox2.Controls.Add(btnSave);
             groupBox2.Controls.Add(btnEdit);
             groupBox2.Controls.Add(btnAdd);
@@ -419,35 +423,13 @@
             // btnExport
             // 
             btnExport.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExport.Location = new Point(1586, 694);
+            btnExport.Location = new Point(1116, 694);
             btnExport.Margin = new Padding(6, 7, 6, 7);
             btnExport.Name = "btnExport";
             btnExport.Size = new Size(210, 94);
             btnExport.TabIndex = 25;
             btnExport.Text = "Xuất Excel";
             btnExport.UseVisualStyleBackColor = true;
-            // 
-            // btnRefresh
-            // 
-            btnRefresh.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(1324, 694);
-            btnRefresh.Margin = new Padding(6, 7, 6, 7);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(210, 94);
-            btnRefresh.TabIndex = 24;
-            btnRefresh.Text = "Làm mới";
-            btnRefresh.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            btnCancel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancel.Location = new Point(1064, 694);
-            btnCancel.Margin = new Padding(6, 7, 6, 7);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(210, 94);
-            btnCancel.TabIndex = 23;
-            btnCancel.Text = "Huỷ";
-            btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -507,10 +489,10 @@
             // 
             cboFilterCategory.Font = new Font("Microsoft Sans Serif", 9.75F);
             cboFilterCategory.FormattingEnabled = true;
-            cboFilterCategory.Location = new Point(1242, 69);
+            cboFilterCategory.Location = new Point(1263, 81);
             cboFilterCategory.Margin = new Padding(6, 7, 6, 7);
             cboFilterCategory.Name = "cboFilterCategory";
-            cboFilterCategory.Size = new Size(288, 38);
+            cboFilterCategory.Size = new Size(393, 38);
             cboFilterCategory.TabIndex = 17;
             // 
             // label16
@@ -527,7 +509,7 @@
             // txtSearch
             // 
             txtSearch.Font = new Font("Microsoft Sans Serif", 9.75F);
-            txtSearch.Location = new Point(186, 74);
+            txtSearch.Location = new Point(186, 86);
             txtSearch.Margin = new Padding(6, 7, 6, 7);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(511, 37);
@@ -590,7 +572,6 @@
         private System.Windows.Forms.TextBox txtBarcode;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.NumericUpDown nudMaxStock;
         private System.Windows.Forms.NumericUpDown nudMinStock;
@@ -598,7 +579,6 @@
         private System.Windows.Forms.NumericUpDown nudSellingPrice;
         private System.Windows.Forms.NumericUpDown nudCostPrice;
         private System.Windows.Forms.ComboBox cboSupplier;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvProducts;
@@ -607,11 +587,12 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private Button btnUpload;
+        private Label label14;
+        private Panel panelPreview;
     }
 }
