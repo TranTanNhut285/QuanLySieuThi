@@ -30,7 +30,7 @@
         {
             label5 = new Label();
             groupBox1 = new GroupBox();
-            txtSearchCode = new TextBox();
+            txtSearch = new TextBox();
             label6 = new Label();
             cboStatus = new ComboBox();
             label4 = new Label();
@@ -69,7 +69,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txtSearchCode);
+            groupBox1.Controls.Add(txtSearch);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(cboStatus);
             groupBox1.Controls.Add(label4);
@@ -88,14 +88,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Bộ lọc tìm kiếm";
             // 
-            // txtSearchCode
+            // txtSearch
             // 
-            txtSearchCode.Font = new Font("Microsoft Sans Serif", 9.75F);
-            txtSearchCode.Location = new Point(482, 162);
-            txtSearchCode.Margin = new Padding(4, 3, 4, 3);
-            txtSearchCode.Name = "txtSearchCode";
-            txtSearchCode.Size = new Size(243, 22);
-            txtSearchCode.TabIndex = 9;
+            txtSearch.Font = new Font("Microsoft Sans Serif", 9.75F);
+            txtSearch.Location = new Point(482, 162);
+            txtSearch.Margin = new Padding(4, 3, 4, 3);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(243, 22);
+            txtSearch.TabIndex = 9;
             // 
             // label6
             // 
@@ -199,6 +199,7 @@
             dgvTransactions.Name = "dgvTransactions";
             dgvTransactions.Size = new Size(1069, 230);
             dgvTransactions.TabIndex = 14;
+            dgvTransactions.CellDoubleClick += DgvTransactions_CellDoubleClick;
             // 
             // MaPhieu
             // 
@@ -245,6 +246,7 @@
             btnPrint.TabIndex = 36;
             btnPrint.Text = "In phiếu";
             btnPrint.UseVisualStyleBackColor = true;
+            btnPrint.Click += btnPrint_Click;
             // 
             // btnRefresh
             // 
@@ -256,6 +258,7 @@
             btnRefresh.TabIndex = 34;
             btnRefresh.Text = "Làm lại";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += BtnRefresh_Click;
             // 
             // btnView
             // 
@@ -267,6 +270,7 @@
             btnView.TabIndex = 33;
             btnView.Text = "Xem chi tiết";
             btnView.UseVisualStyleBackColor = true;
+            btnView.Click += BtnViewDetail_Click;
             // 
             // btnExport
             // 
@@ -278,6 +282,7 @@
             btnExport.TabIndex = 35;
             btnExport.Text = "Xuất Excel";
             btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += BtnExport_Click;
             // 
             // frmTransactionHistory
             // 
@@ -294,6 +299,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmTransactionHistory";
             Text = "frmTransactionHistory";
+            Load += frmTransactionHistory_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
@@ -308,7 +314,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpFromDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSearchCode;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboStatus;
         private System.Windows.Forms.Label label4;

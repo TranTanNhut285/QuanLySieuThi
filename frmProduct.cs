@@ -1274,5 +1274,10 @@ namespace Mini_Mart
             base.OnFormClosing(e);
             _cluster?.Dispose();
         }
+
+        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
