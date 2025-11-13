@@ -34,7 +34,7 @@ namespace Mini_Mart
             throw new NotImplementedException();
         }
 
-        private void frmTransactionHistory_Load(object sender, EventArgs e)
+        private async void frmTransactionHistory_Load(object sender, EventArgs e)
         {
             try
             {
@@ -303,7 +303,7 @@ namespace Mini_Mart
             }
         }
 
-        private void BtnRefresh_Click(object sender, EventArgs e)
+        private async void BtnRefresh_Click(object sender, EventArgs e)
         {
             await LoadTransactionHistory();
         }

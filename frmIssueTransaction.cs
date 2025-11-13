@@ -338,7 +338,7 @@ namespace Mini_Mart
             }
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private async void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -410,6 +410,7 @@ namespace Mini_Mart
                 Cursor = Cursors.Default;
             }
         }
+
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {

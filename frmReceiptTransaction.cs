@@ -29,11 +29,13 @@ namespace Mini_Mart
         private Dictionary<string, string> _supplierCodeToName = new Dictionary<string, string>();
         private Dictionary<string, string> _productCodeToName = new Dictionary<string, string>();
 
+        public string? currentUser { get; private set; }
+
         public frmReceiptTransaction()
         {
             InitializeComponent();
             _currentUser = currentUser;
-            this.Load += FrmReceiptTransaction_Load;
+            this.Load += frmReceiptTransaction_Load;
 
             // Đăng ký các sự kiện
             btnAdd.Click += BtnAdd_Click;
@@ -49,7 +51,7 @@ namespace Mini_Mart
 
         }
 
-        private void frmReceiptTransaction_Load(object sender, EventArgs e)
+        private async void frmReceiptTransaction_Load(object sender, EventArgs e)
         {
             try
             {
@@ -419,7 +421,7 @@ namespace Mini_Mart
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private async void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
